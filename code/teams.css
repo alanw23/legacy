@@ -1,0 +1,369 @@
+*{
+    margin: 0%;
+}
+
+img{
+    aspect-ratio: width/height;
+    width: 24vw;
+    height: auto;   
+}
+
+.teams{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../typefaces/Poppins-ExtraBold.ttf);
+}
+
+.nav{
+    width: 90vw;
+    display: flex;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1.5rem;
+    animation: slideDown 1s ease-in forwards 2s;
+}
+
+.nav ul{
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    /* remove bullets */
+    list-style-type: none;
+}
+
+.nav ul li{
+    font-family: poppins;
+    font-size: 1.5rem;
+}
+
+.nav ul li a{
+    color: white;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10vh);
+    }
+}
+
+.credit{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    text-align: right;
+    font-family: unicaone;
+}
+
+@font-face {
+    font-family: unicaone;
+    src: url(../typefaces/UnicaOne-Regular.ttf);
+}
+
+/* .atlantahawks{
+    background-image: url(../images/atlantahawks-cover.jpeg);
+    background-position: top;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.brooklynnets{
+    background-image: url(../images/brooklynnets-cover.jpg);
+    background-position: top;
+    background-size: cover;
+    background-blend-mode: overlay;
+} */
+
+/* .atlantahawks{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bostonceltics{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brooklynnets{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.charlottehornets{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chicagobulls{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clevelandcavaliers{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dallasmavericks{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.denvernuggets{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detroitpistons{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goldenstatewarriors{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.houstonrockets{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indianapacers{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.laclippers{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.losangeleslakers{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memphisgrizzlies{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.miamiheat{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.milwaukeebucks{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minnesotatimberwolves{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neworleanspelicans{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newyorkknicks{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.okcthunder{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orlandomagic{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.philadelphia76ers{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phoenixsuns{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portlandtrailblazers{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sacramentokings{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sanantoniospurs{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.torontoraptors{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.utahjazz{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.washingtonwizards{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */

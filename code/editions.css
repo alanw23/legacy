@@ -1,0 +1,131 @@
+*{
+    margin: 0%;
+}
+
+:root{
+    font-size: 10px;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../typefaces/Poppins-ExtraBold.ttf);
+}
+
+.editions{
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    width: 100vw;
+}
+
+.row{
+    width: 100vw;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row img{
+    aspect-ratio: height/width;
+    height: 100%;
+    width: auto;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    position: relative;
+
+}
+
+.right {
+    position: absolute;
+    bottom: 0%;
+    right: 0px;
+    writing-mode: vertical-lr;
+    font-family: poppins;
+    font-size: 5rem;
+    text-align: right;
+    padding-bottom: 1.6%;
+}
+
+.left {
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg);
+    font-family: poppins;
+    font-size: 5rem;
+    padding-top: 2.4%;
+}
+
+.nav{
+    /* width: fit-content; */
+    padding: 1%;
+    display: flex;
+    position: absolute;
+    top: -30%;
+    right: 2%;
+    /* justify-content: space-between; */
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1.5rem; */
+    animation: slideDown 1s ease-in forwards 2s;
+}
+
+.nav ul{
+    padding-left: 1%;
+    padding-right: 1%;
+    /* display: flex;
+    justify-content: space-between; */
+    /* remove bullets */
+    list-style-type: none;
+}
+
+.nav ul li{
+    width: 10vw;
+    margin: 5%;
+    padding: 5%;
+    font-family: poppins;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1.5rem;
+}
+
+.nav ul li a{
+    color: white;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(30vh);
+    }
+}
+
+/* .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0%;
+}
+
+.column{
+    flex: 20%;
+    max-width: 20%;
+    padding: 0%;
+}
+
+.column img{
+    vertical-align: middle;
+    width: 100%
+} */

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image: url(../resources/locker-room.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.left{
+    width: 50vw;
+    height: 100vh;
+    background-image: url(../resources/legacy-left.png);
+    background-position: center;
+    background-size: cover;
+    animation: slideLeft 1s ease-in forwards 1s;
+}
+
+.right{
+    width: 50vw;
+    height: 100vh;
+    background-image: url(../resources/legacy-right.png);
+    background-position: center;
+    background-size: cover;
+    animation: slideRight 1s ease-in forwards 1s;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50vw);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(50vw);
+    }
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../typefaces/Poppins-ExtraBold.ttf);
+}
+
+.nav{
+    width: 90vw;
+    display: flex;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 24px;
+    animation: slideDown 1s ease-in forwards 2s;
+}
+
+.nav ul{
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    /* remove bullets */
+    list-style-type: none;
+}
+
+.nav ul li{
+    font-family: poppins;
+    font-size: 1.5rem;
+}
+
+.nav ul li a{
+    color: white;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10vh);
+    }
+}
