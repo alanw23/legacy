@@ -1,3 +1,4 @@
+/* all elements */
 *{
     margin: 0%;
 }
@@ -9,7 +10,11 @@ img{
 }
 
 .teams{
+    /* set snap points on the scroll container */
+    /* y = vertical axis */
+    /* mandatory = scroll container must snap to a snap position */
     scroll-snap-type: y mandatory;
+    /* overflowing content is clipped to fit space */
     overflow-y: scroll;
     height: 100vh;
 }
@@ -17,13 +22,19 @@ img{
 section{
     width: 100vw;
     height: 100vh;
+    /* broswer selects a suitable margin */
     margin: auto;
+    /* displays items in a row */
     display: flex;
+    /* vertical alignment */
     align-items: center;
+    /* horizontal alignment */
     justify-content: center;
-    scroll-snap-align: start;
+    /* snap to the center of the section */
+    scroll-snap-align: center;
 }
 
+/* custom font */
 @font-face {
     font-family: poppins;
     src: url(../typefaces/Poppins-ExtraBold.ttf);
@@ -32,13 +43,20 @@ section{
 .nav{
     width: 90vw;
     display: flex;
+    /* element is removed from the normal document flow */
+    /* position is determined by values of top + left */
     position: absolute;
     top: -5%;
     left: 5%;
+    /* distributed alignment */
+    /* align w/ the start and end */
     justify-content: space-between;
+    /* red | green | blue | alpha (opacity) */
     background-color: rgba(0, 0, 0, 0.8);
+    /* round corners */
     border-radius: 1.5rem;
-    animation: slideDown 1s ease-in forwards 2s;
+    /* name | duration | ease-function | delay */
+    animation: slideDown 1s ease-in forwards 0s;
 }
 
 .nav ul{
@@ -57,19 +75,23 @@ section{
 }
 
 .nav ul li a{
+    /* colour of text */
     color: white;
 }
 
 @keyframes slideDown {
     from {
+        /* starting position */
         transform: translateY(0);
     }
     to {
+        /* ending position */
         transform: translateY(10vh);
     }
 }
 
 .credit{
+    /* fit-content: uses the available space without exceeding max-content */
     width: fit-content;
     height: fit-content;
     position: absolute;

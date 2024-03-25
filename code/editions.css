@@ -1,20 +1,22 @@
+/* all elements */
 *{
     margin: 0%;
 }
 
-:root{
-    font-size: 10px;
-}
-
+/* custom font */
 @font-face {
     font-family: poppins;
     src: url(../typefaces/Poppins-ExtraBold.ttf);
 }
 
 .editions{
-    overflow-x: scroll;
+    /* displays items in a row */
     display: flex;
-    flex-wrap: nowrap;
+    /* overflowing content is clipped to fit space */
+    overflow-x: scroll;
+    /* set snap points on the scroll container */
+    /* x = horizontal axis */
+    /* mandatory = scroll container must snap to a snap position */
     scroll-snap-type: x mandatory;
     width: 100vw;
 }
@@ -22,9 +24,12 @@
 .row{
     width: 100vw;
     height: 20vh;
+    /* broswer selects a suitable margin */
     margin: auto;
     display: flex;
+    /* vertical alignment */
     align-items: center;
+    /* horizontal alignment */
     justify-content: center;
 }
 
@@ -40,75 +45,82 @@ section{
     margin: auto;
     align-items: center;
     justify-content: center;
+    /* snap to the center of the section */
     scroll-snap-align: center;
+    /* element is offset relative to itself */
     position: relative;
+}
 
+.left {
+    /* element is removed from the normal document flow */
+    /* position is determined by values of top + left */
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    /* content flows vertically from left to right */
+    writing-mode: vertical-lr;
+     /* flip horizontal + vertical */
+    transform: rotate(180deg);
+    font-family: poppins;
+    font-size: 3rem;
+    padding-top: 2.4%;
 }
 
 .right {
     position: absolute;
+    /* position is determined by values of bottom + right */
     bottom: 0%;
     right: 0px;
+    /* content flows vertically from left to right */
     writing-mode: vertical-lr;
     font-family: poppins;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: right;
     padding-bottom: 1.6%;
 }
 
-.left {
-    position: absolute;
-    top: 0%;
-    left: 0px;
-    writing-mode: vertical-rl; 
-    transform: rotate(180deg);
-    font-family: poppins;
-    font-size: 5rem;
-    padding-top: 2.4%;
-}
-
 .nav{
-    /* width: fit-content; */
     padding: 1%;
-    display: flex;
     position: absolute;
+    /* position is determined by values of top + right */
     top: -30%;
-    right: 2%;
-    /* justify-content: space-between; */
+    right: 1%;
     text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 1.5rem; */
-    animation: slideDown 1s ease-in forwards 2s;
+    /* name | duration | ease-function | delay */
+    animation: slideDown 1s ease-in forwards 0s;
 }
 
 .nav ul{
-    padding-left: 1%;
-    padding-right: 1%;
-    /* display: flex;
-    justify-content: space-between; */
     /* remove bullets */
     list-style-type: none;
 }
 
 .nav ul li{
-    width: 10vw;
+    /* space between buttons */
     margin: 5%;
-    padding: 5%;
+    /* space around text */
+    padding: 2%;
+    width: 8vw;
     font-family: poppins;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    /* red | green | blue | alpha (opacity) */
     background-color: rgba(0, 0, 0, 0.8);
+    /* round corners */
     border-radius: 1.5rem;
 }
 
 .nav ul li a{
+    /* colour of text */
     color: white;
 }
 
 @keyframes slideDown {
     from {
+        /* starting position */
         transform: translateY(0);
     }
     to {
+        /* ending position */
         transform: translateY(30vh);
     }
 }
